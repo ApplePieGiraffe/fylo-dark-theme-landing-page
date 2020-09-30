@@ -1,0 +1,150 @@
+// +------+
+// | BODY |
+// +------+
+
+body {
+    background-color: var(--color-dark-blue-2);
+}
+
+// +--------+
+// | HEADER |
+// +--------+
+
+.header {
+    background-color: var(--color-dark-blue-1);
+
+    &__content-wrapper {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 90%;
+        margin: auto;
+        padding: calc(2rem + 2vw) 0;
+    }
+
+    &__logo {
+        margin-right: auto;
+
+        svg {
+            height: auto;
+            width: 12vw;
+            min-width: 12rem;
+            max-width: 24rem;
+        }
+    }
+
+    &__nav {
+        ul {
+            display: flex;
+            list-style: none;
+
+            li:not(:last-child) {
+                margin-right: calc(2rem + 2vw);
+            }
+        }
+    }
+}
+
+// +------+
+// | HERO |
+// +------+
+
+.hero {
+    background: url(../img/bg-curvy-mobile.svg), var(--color-dark-blue-1);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0 8vw;
+    padding-top: 4rem;
+    padding-bottom: calc(10rem + 6vw);
+
+    @media only screen and (min-width: 800px) {
+        background: url(../img/bg-curvy-desktop.svg), var(--color-dark-blue-1);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__text-wrapper {
+        text-align: center;
+    }
+
+    &__subheading {
+        margin: 0 auto;
+        max-width: 66rem;
+    }
+}
+
+// +----------+
+// | FEATURES |
+// +----------+
+
+.features {
+    display: grid;
+    grid-template-columns: minmax(auto, 48rem);
+    grid-template-rows: repeat(4, auto);
+    grid-row-gap: 12rem;
+    justify-content: center;
+    padding: 0 8vw;
+    padding-bottom: calc(10rem + 6vw);
+
+    @media only screen and (min-width: 800px) {
+        grid-template-columns: repeat(2, minmax(auto, 50rem));
+        grid-column-gap: calc(6rem + 8vw);
+    }
+
+    .feature-1 {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+    }
+
+    .feature-2 {
+        grid-column: 1 / span 1;
+        grid-row: 2 / span 1;
+    }
+
+    .feature-3 {
+        grid-column: 1 / span 1;
+        grid-row: 3 / span 1;
+    }
+
+    .feature-4 {
+        grid-column: 1 / span 1;
+        grid-row: 4 / span 1;
+    }
+
+    @media only screen and (min-width: 800px) {
+        .feature-1 {
+            grid-column: 0 / span 1;
+            grid-row: 1 / span 1;
+        }
+    
+        .feature-2 {
+            grid-column: 2 / span 1;
+            grid-row: 1 / span 1;
+        }
+    
+        .feature-3 {
+            grid-column: 0 / span 1;
+            grid-row: 2 / span 1;
+        }
+    
+        .feature-4 {
+            grid-column: 2 / span 1;
+            grid-row: 2 / span 1;
+        }
+    }
+}
