@@ -103,6 +103,7 @@ body {
 
     @media only screen and (min-width: 800px) {
         grid-template-columns: repeat(2, minmax(auto, 50rem));
+        grid-template-rows: repeat(2, auto);
         grid-column-gap: calc(6rem + 8vw);
     }
 
@@ -146,5 +147,102 @@ body {
             grid-column: 2 / span 1;
             grid-row: 2 / span 1;
         }
+    }
+}
+
+// +-------+
+// | ABOUT |
+// +-------+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 8vw;
+    padding-bottom: calc(10rem + 6vw);
+
+    @media only screen and (min-width: 800px) {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 85%;
+        padding: 0;
+        padding-bottom: calc(10rem + 6vw);
+    }
+
+    &__img-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        margin-bottom: 10vw;
+
+        @media only screen and (min-width: 800px) {
+            width: 47.5%;
+            margin-bottom: 0;
+        }
+    }
+
+    &__img {
+        height: auto;
+        width: 100%;
+        max-width: 615px;
+    }
+
+    &__text-wrapper {
+        width: 100%;
+
+        @media only screen and (min-width: 800px) {
+            width: 47.5%;
+        }
+    }
+
+    &__heading {
+        text-align: center;
+
+        @media only screen and (min-width: 800px) {
+            max-width: 45rem;
+            text-align: start;
+        }
+    }
+
+    &__link {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            height: 1px;
+            width: 18.5rem;
+            background: linear-gradient(to right, var(--color-cyan), var(--color-blue));
+
+            @media only screen and (min-width: 1000px) {
+                width: 21.25rem;
+            }
+        }
+    }
+}
+
+// +--------------+
+// | TESTIMONIALS |
+// +--------------+
+
+.testimonials {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 8vw;
+    padding-bottom: calc(10rem + 6vw);
+
+    @media only screen and (min-width: 800px) {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 85%;
+        padding: 0;
+        padding-bottom: calc(10rem + 6vw);
     }
 }

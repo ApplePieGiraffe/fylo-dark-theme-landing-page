@@ -23,12 +23,12 @@
         top: -10rem;
         left: -2rem;
         background: linear-gradient(to right, var(--color-cyan), var(--color-blue));
-        transition: transform .2s;
+        transition: transform .5s;
         z-index: -1;
     }
 
     &:hover::before {
-        transform: rotate(180deg);
+        animation: .5s linear infinite spin;
     }
 
     &:active {
@@ -46,5 +46,65 @@
     &__img {
         height: 10rem;
         width: auto;
+    }
+}
+
+// +-------------+
+// | TESTIMONIAL |
+// +-------------+
+
+.testimonial-card {
+    max-width: 50rem;
+    padding: 4rem 3.5rem;
+    border-radius: 6px;
+    background-color: var(--color-dark-blue-4);
+
+    &__review {
+        margin-bottom: 3rem;
+    }
+
+    &__reviewer-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__avatar {
+        height: auto;
+        width: 4rem;
+        margin-right: 1.5rem;
+        border-radius: 50%;
+    }
+
+    &__description-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+
+    &__title {
+        font-size: 1rem;
+    }
+
+    &:first-child {
+        position: relative;
+
+        ::before {
+                content: url(../img/bg-quotes.png);
+                position: absolute;
+                top: -4rem;
+                left: -2rem;
+                transform: scale(.75);
+                z-index: -1;
+
+                @media only screen and (min-width: 800px) {
+                    top: -4.5rem;
+                    left: -1.5rem;
+                    transform: scale(1);
+                }
+        }
     }
 }
