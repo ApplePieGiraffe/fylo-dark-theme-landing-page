@@ -100,6 +100,7 @@ html {
           transform: scale(1); } }
 
 body {
+  overflow-x: hidden;
   background-color: var(--color-dark-blue-2); }
 
 .header {
@@ -109,6 +110,7 @@ body {
     align-items: center;
     height: 100%;
     width: 90%;
+    max-width: 1440px;
     margin: auto;
     padding: calc(2rem + 2vw) 0; }
   .header__logo {
@@ -378,6 +380,16 @@ body {
           fill: white; }
         .footer__social-icons a svg:hover * {
           fill: var(--color-cyan); }
+
+.attribution {
+  margin-top: 6rem;
+  font-size: 11px;
+  text-align: center; }
+  .attribution a {
+    background: linear-gradient(to right, var(--color-cyan), var(--color-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; }
 
 body {
   color: var(--color-white);
